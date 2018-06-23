@@ -1,5 +1,8 @@
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/Assets/AssetStoreTools*
-/.vs/
+library
+Library
+Temp
+temp
+obj
+Obj
+Assets/AssetStoreTools*
+.vs
