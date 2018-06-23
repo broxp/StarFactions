@@ -53,7 +53,7 @@ public class Board : MonoBehaviour
 	string text;
 	// TileData first;
 	TileData[][] data;
-	bool hasChanges;
+	public bool hasChanges;
 	int waitCounter;
 	int comboCounter;
 	int points;
@@ -104,8 +104,10 @@ public class Board : MonoBehaviour
 	void Update ()
 	{
 		instance = this;
-		energyBar.transform.localScale = new Vector3 (Time.time, 1, 1);
-		lifeBar.transform.localScale = new Vector3 (Time.time / 2, 1, 1);
+		var energy = Time.time;
+		var life = Time.time / 2;
+		energyBar.transform.localScale = new Vector3 (energy, 1, 1);
+		lifeBar.transform.localScale = new Vector3 (life, 1, 1);
 		if (hasChanges && match3 != null) {
 
 			if (waitCounter++ < waitTime) {
@@ -151,23 +153,22 @@ public class Board : MonoBehaviour
 		}
 		for (int tempY = 0; tempY < h; tempY++) {
 			for (int tempX = 0; tempX < w; tempX++) {
-				createButton (tempY, tempX);
+				createButton (tempY, tempX, data[tempY][tempX]);
 			}
 		}
 		refreshColours ();
 	}
 
-	void createButton (int y, int x)
+	void createButton (int y, int x, TileData tileData)
 	{
 		int rndNum = match3.get (y, x);
 		GameObject newBtn = Instantiate (proto, Vector3.zero, Quaternion.identity);
 		Tile t = newBtn.GetComponent<Tile> ();
-		t.x = x;
-		t.y = y;
+		t.data = tileData;
 		var tile = data [y] [x];
 		tile.gameObject = newBtn;
 		tile.colour = rndNum;
-		newBtn.GetComponent<Image>().color = colours [tile.colour];
+		newBtn.GetComponent<Image> ().color = colours [tile.colour];
 		var btnObj = newBtn.gameObject;
 		btnObj.name = "tile" + y + "," + x;
 		btnObj.transform.SetParent (gameObject.transform);
@@ -187,14 +188,12 @@ public class Board : MonoBehaviour
 
 	public void OnClick (int y, int x, int dy, int dx)
 	{
-		var debug = SwipeMovement.debug + "@" + y + "," + x;
 		var first = data [y] [x];
+		var debug = "delta: " + dy + "," + dx + "@" + y + "," + x+ ", "+first.colour;
 		if (y + dy >= h || x + dx >= w || y + dy < 0 || x + dx < 0) {
-			print ("Out of bounds: " + (y + dy) + "," + (x + dx));
+			print ("Out of bounds: " + debug);
 			return;
 		}
-		var tile = data [y + dy] [x + dx];
-
 		/*
 		if (!tile.on && first == null) {
 			tile.btn.image.color = coloursHighlight[tile.colour];
@@ -214,6 +213,8 @@ public class Board : MonoBehaviour
 			var dx = Mathf.Abs(first.x - tile.x);
 			var dy = Mathf.Abs(first.y - tile.y);
 			*/
+
+		var tile = data [y + dy] [x + dx];
 		if (!(dx == 0 && dy == 1) && !(dx == 1 && dy == 0)) {
 			text = "Can only swap adjacent tiles. " + debug;
 			first.on = false;
@@ -247,7 +248,7 @@ public class Board : MonoBehaviour
 
 	Vector3 pos (int x, int y)
 	{
-		return new Vector3 (x, y, 0) * size + offset;
+		return new Vector3 (x, h - y, 0) * size + offset;
 	}
 
 	void refreshColours ()
@@ -259,7 +260,7 @@ public class Board : MonoBehaviour
 				d.colour = c;
 				var arr = d.on ? coloursHighlight : colours;
 				var img = d.gameObject.GetComponent<Image> ();
-					img.color = arr [c];
+				img.color = arr [c];
 				// print (arr [c] + " / " + c);
 				img.transform.localScale = Vector3.one * 4f;
 			}
