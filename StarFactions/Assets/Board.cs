@@ -24,7 +24,7 @@ public class TileData : ITileData
 
 	public bool on { get; set; }
 
-	public Button btn;
+	public GameObject gameObject;
 
 	public override string ToString ()
 	{
@@ -34,6 +34,7 @@ public class TileData : ITileData
 
 public class Board : MonoBehaviour
 {
+	public static Board instance;
 	public int w = 20;
 	public int h = 10;
 	public Vector3 offset = new Vector3 (0, 0, 0);
@@ -42,7 +43,7 @@ public class Board : MonoBehaviour
 	public int size = 32;
 	public int waitTime = 25;
 	//
-	public Button proto;
+	public GameObject proto;
 	public GameObject lifeBar;
 	public GameObject energyBar;
 	public Text output;
@@ -50,7 +51,7 @@ public class Board : MonoBehaviour
 	//Vector3 screen;
 	Match3 match3;
 	string text;
-	TileData first;
+	// TileData first;
 	TileData[][] data;
 	bool hasChanges;
 	int waitCounter;
@@ -58,15 +59,17 @@ public class Board : MonoBehaviour
 	int points;
 	static Color[] colours;
 	static Color[] coloursHighlight;
-	static Board() {
+
+	static Board ()
+	{
 		colours = new Color[Ruby.NUMBER_OF_COLORS];
 		colours [Ruby.NONE] = Color.clear;
 		colours [Ruby.YELLOW] = Color.yellow;
-		colours [Ruby.BLUE] = Color.Lerp(Color.cyan, Color.blue, 0.8f);
-		colours [Ruby.RED] = Color.Lerp(Color.red, Color.black, 0.2f);
-		colours [Ruby.GREEN] = Color.Lerp(Color.green, Color.black, 0.5f);
-		colours [Ruby.WHITE] = Color.Lerp(Color.white, Color.black, 0.1f);
-		colours [Ruby.PURPLE] = Color.Lerp(Color.red, Color.blue, 0.5f);
+		colours [Ruby.BLUE] = Color.Lerp (Color.cyan, Color.blue, 0.8f);
+		colours [Ruby.RED] = Color.Lerp (Color.red, Color.black, 0.2f);
+		colours [Ruby.GREEN] = Color.Lerp (Color.green, Color.black, 0.5f);
+		colours [Ruby.WHITE] = Color.Lerp (Color.white, Color.black, 0.1f);
+		colours [Ruby.PURPLE] = Color.Lerp (Color.red, Color.blue, 0.5f);
 		coloursHighlight = Array.ConvertAll (colours, x => Color.Lerp (x, Color.white, 0.33f));
 		/*Color.white,
 		Color.Lerp(Color.cyan, Color.blue, 0.8f),
@@ -79,8 +82,28 @@ public class Board : MonoBehaviour
 	    */
 	}
 
+	public void swipe (string lastSwipe, Vector2 firstPressPos)
+	{
+		return;
+		/*Tile closest = null;
+		var minDist = float.MaxValue;
+		foreach (var item in GetComponentsInChildren<Tile> ()) {
+			var delta = item.transform.position - new Vector3 (firstPressPos.x, firstPressPos.y, 0);
+			var dist = (delta.x * delta.x) + (delta.y * delta.y);
+			if (dist < minDist) {
+				minDist = dist;
+				closest = item;
+			}
+		}
+		var dy = lastSwipe == "up" ? -1 : lastSwipe == "down" ? 1 : 0;
+		var dx = lastSwipe == "left" ? -1 : lastSwipe == "right" ? 1 : 0;
+		OnClick (closest.y, closest.x, dy, dx);*/
+	}
+
+
 	void Update ()
 	{
+		instance = this;
 		energyBar.transform.localScale = new Vector3 (Time.time, 1, 1);
 		lifeBar.transform.localScale = new Vector3 (Time.time / 2, 1, 1);
 		if (hasChanges && match3 != null) {
@@ -92,7 +115,7 @@ public class Board : MonoBehaviour
 			
 			hasChanges = !match3.check ();
 			if (hasChanges) {
-				deleteRefill();
+				deleteRefill ();
 				comboCounter++;
 				text = "Points: " + points + "   Combo: x" + comboCounter;
 			} else {
@@ -112,7 +135,7 @@ public class Board : MonoBehaviour
 		match3.init (w, h);
 		hasChanges = true;
 		lastScale = scale;
-		foreach (var item in gameObject.GetComponentsInChildren<Button>()) {
+		foreach (var item in gameObject.GetComponentsInChildren<Tile>()) {
 			if (item.tag != "keep") {
 				Destroy (item.gameObject);
 			}
@@ -137,25 +160,42 @@ public class Board : MonoBehaviour
 	void createButton (int y, int x)
 	{
 		int rndNum = match3.get (y, x);
-		var newBtn = Instantiate (proto, Vector3.zero, Quaternion.identity) as Button;
+		GameObject newBtn = Instantiate (proto, Vector3.zero, Quaternion.identity);
+		Tile t = newBtn.GetComponent<Tile> ();
+		t.x = x;
+		t.y = y;
 		var tile = data [y] [x];
-		tile.btn = newBtn;
+		tile.gameObject = newBtn;
 		tile.colour = rndNum;
-		newBtn.image.color = colours [tile.colour];
+		newBtn.GetComponent<Image>().color = colours [tile.colour];
 		var btnObj = newBtn.gameObject;
 		btnObj.name = "tile" + y + "," + x;
 		btnObj.transform.SetParent (gameObject.transform);
 		var trans = newBtn.transform as RectTransform;
 		trans.localPosition = pos (x, y);
 		trans.sizeDelta = Vector2.one * scale;
-		newBtn.onClick.AddListener (() => {
-			OnClick (y, x);
-		});
+		/*newBtn.onClick.AddListener (() => {
+			
+			var swipe = SwipeMovement.lastSwipe;
+			print (y + "," + x + ": " + swipe);
+			var dy = swipe == "up" ? -1 : swipe == "down" ? 1 : 0;
+			var dx = swipe == "left" ? -1 : swipe == "right" ? 1 : 0;
+
+			OnClick (y, x, dy, dx);
+		});*/
 	}
 
-	void OnClick (int y, int x)
+	public void OnClick (int y, int x, int dy, int dx)
 	{
-		var tile = data [y] [x];
+		var debug = SwipeMovement.debug + "@" + y + "," + x;
+		var first = data [y] [x];
+		if (y + dy >= h || x + dx >= w || y + dy < 0 || x + dx < 0) {
+			print ("Out of bounds: " + (y + dy) + "," + (x + dx));
+			return;
+		}
+		var tile = data [y + dy] [x + dx];
+
+		/*
 		if (!tile.on && first == null) {
 			tile.btn.image.color = coloursHighlight[tile.colour];
 			tile.on = true;
@@ -173,37 +213,38 @@ public class Board : MonoBehaviour
 		if (first != null && first != tile) {
 			var dx = Mathf.Abs(first.x - tile.x);
 			var dy = Mathf.Abs(first.y - tile.y);
-			if(!(dx == 0 && dy == 1) && !(dx == 1 && dy == 0)) {
-				text = "Can only swap adjacent tiles.";
-				first.on = false;
-				tile.on = false;
-				first = null;
-				refreshColours();
-				return;
-			} else {
-				if(!match3.validSwap (first, tile)){
-					text = "There is not match after swapping.";
-					first.on = false;
-					tile.on = false;
-					first = null;
-					refreshColours();
-					return;
-				}
-			}
-
-			match3.swap (first, tile);
-			var temp = first.colour;
-			first.colour = tile.colour;
-			tile.colour = temp;
-
-			hasChanges = true;
-
+			*/
+		if (!(dx == 0 && dy == 1) && !(dx == 1 && dy == 0)) {
+			text = "Can only swap adjacent tiles. " + debug;
 			first.on = false;
 			tile.on = false;
 			first = null;
+			refreshColours ();
+			return;
+		} else {
+			if (!match3.validSwap (first, tile)) {
+				text = "There is not match after swapping. " + debug;
+				first.on = false;
+				tile.on = false;
+				first = null;
+				refreshColours ();
+				return;
+			}
 		}
+
+		match3.swap (first, tile);
+		var temp = first.colour;
+		first.colour = tile.colour;
+		tile.colour = temp;
+
+		hasChanges = true;
+
+		first.on = false;
+		tile.on = false;
+		first = null;
+		//}
 	}
-	
+
 	Vector3 pos (int x, int y)
 	{
 		return new Vector3 (x, y, 0) * size + offset;
@@ -217,9 +258,10 @@ public class Board : MonoBehaviour
 				var c = match3.get (tempY, tempX);
 				d.colour = c;
 				var arr = d.on ? coloursHighlight : colours;
-				d.btn.image.color = arr [c];
+				var img = d.gameObject.GetComponent<Image> ();
+					img.color = arr [c];
 				// print (arr [c] + " / " + c);
-				d.btn.image.transform.localScale = Vector3.one * 4f;
+				img.transform.localScale = Vector3.one * 4f;
 			}
 		}
 	}

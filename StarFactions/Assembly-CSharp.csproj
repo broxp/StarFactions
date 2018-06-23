@@ -54,6 +54,7 @@
      <Compile Include="Assets\Board.cs" />
      <Compile Include="Assets\Match3.cs" />
      <Compile Include="Assets\Ruby.cs" />
+     <Compile Include="Assets\SwipeMovement.cs" />
      <Compile Include="Assets\Test.cs" />
      <Compile Include="Assets\Tile.cs" />
  <Reference Include="UnityEngine.UI">
