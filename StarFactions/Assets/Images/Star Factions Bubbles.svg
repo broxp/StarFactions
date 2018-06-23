@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="329.24705"
-     inkscape:cy="560.21973"
+     inkscape:zoom="2.8"
+     inkscape:cx="573.49435"
+     inkscape:cy="495.18351"
      inkscape:document-units="px"
      inkscape:current-layer="layer4"
      showgrid="false"
@@ -231,6 +231,162 @@
        id="path8253-5"
        inkscape:connector-curvature="0"
        inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\fire.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:129.61599731;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.46923074;marker:none;enable-background:accumulate"
+       id="rect4145-2"
+       width="100"
+       height="150"
+       x="300"
+       y="502.36221"
+       ry="24.9"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\energy.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <circle
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#edde9e;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="path4138-1"
+       cx="350"
+       cy="552.36224"
+       r="75"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\energy.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.99228144px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 298.02608,607.39467 c 0,0 114.80741,1.92529 122.11332,-59.68405 7.30593,-61.60932 1.04372,24.06614 1.04372,24.06614 0,0 -29.2237,51.98288 -45.92298,54.87082 -16.69926,2.88793 -57.4037,1.92529 -77.23406,-19.25291 z"
+       id="path4148-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\energy.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:129.61599731;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.46923074;marker:none;enable-background:accumulate"
+       id="rect4145-8-6"
+       width="100"
+       height="150"
+       x="100"
+       y="502.36221"
+       ry="24.9"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\shield.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <circle
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#21ff2e;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="path4138-0-2"
+       cx="150"
+       cy="552.36224"
+       r="75"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\shield.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.99228144px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 98.026074,607.39471 c 0,0 114.807416,1.92529 122.113326,-59.68406 7.30593,-61.60932 1.04372,24.06614 1.04372,24.06614 0,0 -29.2237,51.98289 -45.92299,54.87083 -16.69926,2.88793 -57.4037,1.92529 -77.234056,-19.25291 z"
+       id="path4148-6-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\shield.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:129.61599731;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.46923074;marker:none;enable-background:accumulate"
+       id="rect4145-8-3-2"
+       width="100"
+       height="150"
+       x="500"
+       y="502.36221"
+       ry="24.9"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\fire.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <circle
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#f82eff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="path4138-0-5-4"
+       cx="550"
+       cy="552.36224"
+       r="75"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\fire.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.99228144px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 498.02609,607.39471 c 0,0 114.80741,1.92529 122.11332,-59.68406 7.30593,-61.60932 1.04372,24.06614 1.04372,24.06614 0,0 -29.2237,51.98289 -45.92298,54.87083 -16.69926,2.88793 -57.4037,1.92529 -77.23406,-19.25291 z"
+       id="path4148-6-0-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\fire.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 520.35868,611.35406 c 0,0 17.39188,-19.97197 17.96517,-41.59334 l -30.27465,9.12134 0.66562,-23.92398 c 0,0 33.64442,-2.30451 31.60516,-23.82237 l -16.30149,0.59419 -2.4e-4,-11.43295 12.31488,-3.62746 c 6.54565,-3.09849 13.75711,-11.12584 12.66648,-25.51756"
+       id="path4240"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 577.26917,610.94031 c 0,0 -17.39188,-19.97197 -17.96517,-41.59335 l 30.27465,9.12134 -0.66562,-23.92398 c 0,0 -33.64442,-2.30451 -31.60516,-23.82237 l 16.30149,0.59419 2.4e-4,-11.43295 -11.6006,-3.62746 c -6.54565,-3.09848 -14.11425,-7.91155 -13.02362,-22.30326"
+       id="path4240-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 330.85715,629.71935 c -0.29411,-0.39215 -39.6214,-83.72056 51.13818,-53.59968 L 395.5,560.07649 c -11.34508,-22.38092 -150.09643,-27.65462 -64.64285,69.64286 z"
+       id="path4259"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 389.07143,510.43363 8.21429,36.42857 c -7.10037,-4.43631 -12.29258,-8.14521 -28.92858,-11.42857 l 6.42859,-28.92857 z"
+       id="path4261"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 354.07143,534.71935 5,-21.78571 -19.64286,0.71429 -5.35715,22.14285 c 7.7381,-1.6619 20.00001,-1.07143 20.00001,-1.07143 z"
+       id="path4263"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 324.46157,520.44256 -4.24497,17.73172 c -9.76733,2.33334 -21.4449,14.25371 -21.4449,14.25371 0,0 -5.7015,-28.73149 25.68987,-31.98543 z"
+       id="path4267"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 127.20041,594.37263 c 12.14376,-1.90494 20.19304,-4.47389 21.83847,-21.28938 l 19.05903,18.62822 c 0,0 -10.60311,28.58081 -22.23553,18.62819 z"
+       id="path4269"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsc"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 177.38839,558.24231 -0.60692,11.37029 c -12.1455,-9.60934 -32.89935,-25.88179 -60.99633,2.33237 0,0 18.20786,-53.93599 61.60325,-13.70266 z"
+       id="path4271"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 193.96874,531.54959 -0.90081,19.61774 c -18.02664,-16.57949 -48.83003,-44.65518 -90.53225,4.02416 0,0 27.02455,-93.05855 91.43306,-23.6419 z"
+       id="path4271-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc"
        inkscape:export-xdpi="100"
        inkscape:export-ydpi="100" />
   </g>
