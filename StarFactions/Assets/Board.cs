@@ -104,8 +104,8 @@ public class Board : MonoBehaviour
 	void Update ()
 	{
 		instance = this;
-		var energy = Time.time;
-		var life = Time.time / 2;
+		var energy = Time.time % 20 / 3;
+		var life = (Time.time % 20) / 10;
 		energyBar.transform.localScale = new Vector3 (energy, 1, 1);
 		lifeBar.transform.localScale = new Vector3 (life, 1, 1);
 		if (hasChanges && match3 != null) {
@@ -153,7 +153,7 @@ public class Board : MonoBehaviour
 		}
 		for (int tempY = 0; tempY < h; tempY++) {
 			for (int tempX = 0; tempX < w; tempX++) {
-				createButton (tempY, tempX, data[tempY][tempX]);
+				createButton (tempY, tempX, data [tempY] [tempX]);
 			}
 		}
 		refreshColours ();
@@ -163,8 +163,10 @@ public class Board : MonoBehaviour
 	{
 		int rndNum = match3.get (y, x);
 		GameObject newBtn = Instantiate (proto, Vector3.zero, Quaternion.identity);
-		Tile t = newBtn.GetComponent<Tile> ();
+		var t = newBtn.GetComponent<Tile> ();
 		t.data = tileData;
+		var bc = newBtn.GetComponent<BoxCollider2D> ();
+		bc.size = new Vector2 (size / 4, size / 4);
 		var tile = data [y] [x];
 		tile.gameObject = newBtn;
 		tile.colour = rndNum;
@@ -201,7 +203,7 @@ public class Board : MonoBehaviour
 			x -= 1;
 			okOverride = true;
 		}
-		var debug = "delta: " + dx + "," + dy + "@" + x + "," + y+ ", "+first.colour;
+		var debug = "delta: " + dx + "," + dy + "@" + x + "," + y + ", " + first.colour;
 		if (y + dy >= h || x + dx >= w || y + dy < 0 || x + dx < 0) {
 			print ("Out of bounds: " + debug);
 			return;
