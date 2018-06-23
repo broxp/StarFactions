@@ -170,13 +170,12 @@ public class Board : MonoBehaviour
 		tile.colour = rndNum;
 		newBtn.GetComponent<Image> ().color = colours [tile.colour];
 		var btnObj = newBtn.gameObject;
-		btnObj.name = "tile" + y + "," + x;
+		btnObj.name = "tile" + x + "," + y;
 		btnObj.transform.SetParent (gameObject.transform);
 		var trans = newBtn.transform as RectTransform;
 		trans.localPosition = pos (x, y);
 		trans.sizeDelta = Vector2.one * scale;
 		/*newBtn.onClick.AddListener (() => {
-			
 			var swipe = SwipeMovement.lastSwipe;
 			print (y + "," + x + ": " + swipe);
 			var dy = swipe == "up" ? -1 : swipe == "down" ? 1 : 0;
@@ -189,7 +188,20 @@ public class Board : MonoBehaviour
 	public void OnClick (int y, int x, int dy, int dx)
 	{
 		var first = data [y] [x];
-		var debug = "delta: " + dy + "," + dx + "@" + y + "," + x+ ", "+first.colour;
+
+		var okOverride = false;
+		if (dy == -1 && dx == 0) {
+			dy = 0;
+			y -= 1;
+			okOverride = true;
+		}
+
+		if (dx == -1 && dy == 0) {
+			dx = 0;
+			x -= 1;
+			okOverride = true;
+		}
+		var debug = "delta: " + dx + "," + dy + "@" + x + "," + y+ ", "+first.colour;
 		if (y + dy >= h || x + dx >= w || y + dy < 0 || x + dx < 0) {
 			print ("Out of bounds: " + debug);
 			return;
@@ -215,7 +227,8 @@ public class Board : MonoBehaviour
 			*/
 
 		var tile = data [y + dy] [x + dx];
-		if (!(dx == 0 && dy == 1) && !(dx == 1 && dy == 0)) {
+
+		if (!(dx == 0 && dy == 1) && !(dx == 1 && dy == 0) && !okOverride) {
 			text = "Can only swap adjacent tiles. " + debug;
 			first.on = false;
 			tile.on = false;

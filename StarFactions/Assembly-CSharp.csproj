@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Board.cs" />
+     <Compile Include="Assets\Helper.cs" />
      <Compile Include="Assets\Match3.cs" />
      <Compile Include="Assets\Ruby.cs" />
      <Compile Include="Assets\SwipeMovement.cs" />
