@@ -1,5 +1,5 @@
-/*
-#if !UNITY_EDITOR_64
+
+#if UNITY_EDITOR_64
 using NUnit.Framework;
 using System;
 
@@ -12,10 +12,16 @@ namespace AssemblyCSharp
 		public void TestCase ()
 		{
 			var r = new Ruby ();
-			r.prepare ();
-			r.puts_field ();
+			var occ = new int[100];
+			for (int i = 0; i < 1000; i++) {
+				occ [r.randColor ()]++;
+			}
+			for (int i = 0; i < 7; i++) {
+				Console.WriteLine ("Color " + i + ": " + occ [i]);
+			}
+			//r.prepare ();
+			//r.puts_field ();
 		}
 	}
 }
 #endif
-*/

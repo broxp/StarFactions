@@ -36,13 +36,15 @@ public class Board : MonoBehaviour
 {
 	public int w = 20;
 	public int h = 10;
-	public Vector3 offset = new Vector3 (-320, -120, 0);
-	public Vector3 offset2 = new Vector3 (-320, -120, 0);
+	public Vector3 offset = new Vector3 (0, 0, 0);
+	public Vector3 offset2 = new Vector3 (0, 0, 0);
 	public float scale = 8;
 	public int size = 32;
 	public int waitTime = 25;
 	//
 	public Button proto;
+	public GameObject lifeBar;
+	public GameObject energyBar;
 	public Text output;
 	float lastScale;
 	//Vector3 screen;
@@ -54,18 +56,33 @@ public class Board : MonoBehaviour
 	int waitCounter;
 	int comboCounter;
 	int points;
-	static Color[] colours = new [] {
-		Color.white,
+	static Color[] colours;
+	static Color[] coloursHighlight;
+	static Board() {
+		colours = new Color[Ruby.NUMBER_OF_COLORS];
+		colours [Ruby.NONE] = Color.clear;
+		colours [Ruby.YELLOW] = Color.yellow;
+		colours [Ruby.BLUE] = Color.Lerp(Color.cyan, Color.blue, 0.8f);
+		colours [Ruby.RED] = Color.Lerp(Color.red, Color.black, 0.2f);
+		colours [Ruby.GREEN] = Color.Lerp(Color.green, Color.black, 0.5f);
+		colours [Ruby.WHITE] = Color.Lerp(Color.white, Color.black, 0.1f);
+		colours [Ruby.PURPLE] = Color.Lerp(Color.red, Color.blue, 0.5f);
+		coloursHighlight = Array.ConvertAll (colours, x => Color.Lerp (x, Color.white, 0.33f));
+		/*Color.white,
 		Color.Lerp(Color.cyan, Color.blue, 0.8f),
 		Color.Lerp(Color.green, Color.black, 0.5f),
-		Color.yellow,
+		,
 		Color.Lerp(Color.red, Color.black, 0.2f),
-		Color.Lerp(Color.yellow, Color.red, 0.5f)
-	};
-	static Color[] coloursHighlight = Array.ConvertAll(colours, x => Color.Lerp(x, Color.white, 0.33f));
+		Color.Lerp(Color.yellow, Color.red, 0.5f),
+		Color.Lerp(Color.black, Color.red, 0.5f),
+		Color.Lerp(Color.black, Color.black, 0.5f)
+	    */
+	}
 
 	void Update ()
 	{
+		energyBar.transform.localScale = new Vector3 (Time.time, 1, 1);
+		lifeBar.transform.localScale = new Vector3 (Time.time / 2, 1, 1);
 		if (hasChanges && match3 != null) {
 
 			if (waitCounter++ < waitTime) {
@@ -189,7 +206,7 @@ public class Board : MonoBehaviour
 	
 	Vector3 pos (int x, int y)
 	{
-		return new Vector3 (x + 1, -y + 1, 0) * size + offset;
+		return new Vector3 (x, y, 0) * size + offset;
 	}
 
 	void refreshColours ()
@@ -201,6 +218,7 @@ public class Board : MonoBehaviour
 				d.colour = c;
 				var arr = d.on ? coloursHighlight : colours;
 				d.btn.image.color = arr [c];
+				// print (arr [c] + " / " + c);
 				d.btn.image.transform.localScale = Vector3.one * 4f;
 			}
 		}

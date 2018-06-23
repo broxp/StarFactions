@@ -35,9 +35,20 @@ public class BoardState
 public class Ruby : BoardState
 {
 	// Constants:
+	public static readonly int NONE = 0;
+	public static readonly int YELLOW = 1;
+	public static readonly int RED = 2;
+	public static readonly int BLUE = 3;
+	public static readonly int GREEN = 4;
+	public static readonly int PURPLE = 5;
+	public static readonly int WHITE = 6;
+	public static readonly int NUMBER_OF_COLORS = 7;
+
 	readonly int[] invalid = new int[0];
 	readonly object[] no_moves = new object[0];
-	readonly int[] COLOURS = new[]{1, 2, 3, 4, 5};
+	// readonly int BLACK = 7;
+	readonly int[] COLOURS = new[]{YELLOW, RED, BLUE, GREEN, PURPLE, WHITE};
+	readonly double[] RANDOM_ROULETTE_WHEEL = new[]{28.0, 13.0, 13.0, 13.0, 13.0, 13.0};
 	readonly string[] DIR = new []{"r", "l", "u", "d"};
 	readonly int MIN_NEIGHBOURS = 2;
 	readonly Random rnd = new Random ();
@@ -58,10 +69,27 @@ public class Ruby : BoardState
 		HEIGHT = h;
 		WIDTH = w;
 	}
-	
-	public int rand (int max)
+
+	public int randColor ()
 	{
-		return rnd.Next (max);
+		return rand (COLOURS, RANDOM_ROULETTE_WHEEL);
+	}
+
+
+	public int rand (int[] arr, double[] wheel)
+	{
+		var len = arr.Length;
+		var completeSum = 0.0;
+		Array.ForEach (wheel, x => completeSum += x);
+		var randValue = rnd.Next ((int)completeSum);
+		var sum = 0.0;
+		for (int i = 0; i < len; i++) {
+			sum += wheel [i];
+			if (sum > randValue) {
+				return arr[i];
+			}
+		}
+		return arr[0];
 	}
 
 	public static void Main (string[] args)
@@ -218,7 +246,7 @@ public class Ruby : BoardState
 		foreach (var y in 0.up_to(HEIGHT-1)) {
 			foreach (var x in 0.up_to(WIDTH-1)) {
 				if (field [y] [x] == 0) {
-					field [y] [x] = COLOURS [rand (COLOURS.Length)];
+					field [y] [x] = randColor();
 				}
 			}
 		}
