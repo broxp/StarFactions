@@ -55,13 +55,21 @@ public class Match3
 	}
 	
 	/// returns whether done
-	public int deleteRefill ()
+	public int delete ()
 	{
 		var del = ruby.get_deletions ();
 		ruby.exec_deletions (del);
 		var res  = del.Count;
-		ruby.fall_down ();
-		ruby.refill ();
 		return res;
+	}
+	
+	public void fallDown ()
+	{
+		ruby.fall_down ();
+	}
+
+	public void refill ()
+	{
+		ruby.refill ();
 	}
 }

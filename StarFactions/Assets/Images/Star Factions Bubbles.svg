@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -391,3 +392,242 @@
        inkscape:export-ydpi="100" />
   </g>
 </svg>
+=======
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Star Factions Bubbles.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="329.24705"
+     inkscape:cy="560.21973"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer4"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="768"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2">
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:129.61599731;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.46923074;marker:none;enable-background:accumulate"
+       id="rect4145"
+       width="100"
+       height="150"
+       x="300"
+       y="252.3622"
+       ry="24.9"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\energy.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#ffe600;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="path4138"
+       cx="350"
+       cy="302.36221"
+       r="75"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\energy.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 0">
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.99228144px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 298.02608,357.39464 c 0,0 114.80741,1.92529 122.11332,-59.68404 7.30593,-61.60932 1.04372,24.06614 1.04372,24.06614 0,0 -29.2237,51.98287 -45.92298,54.87081 -16.69926,2.88793 -57.4037,1.92529 -77.23406,-19.25291 z"
+       id="path4148"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\energy.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Layer -1">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:8.35385132;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+       d="m 328.9992,252.04467 -19.32096,54.58096 c 0,0 18.18443,2.2278 11.36527,11.13898 -6.81916,8.91117 -13.63832,13.36677 -13.63832,13.36677 0,0 28.41317,-5.5695 36.36885,-11.13898 7.95568,-5.56948 -9.09221,51.23929 -9.09221,51.23929 l 48.87066,-65.71996 c 0,0 -12.50182,5.56949 -21.59401,1.1139 -9.09222,-4.45559 -4.54612,-24.50575 -4.54612,-24.50575 0,0 -13.63832,16.70846 -23.86706,16.70846 -10.22873,0 9.09222,-27.84743 9.09222,-27.84743 l 19.32096,-12.25287 c 0,0 -21.594,3.34169 -32.95928,-6.68337 z"
+       id="path4151"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\energy.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:129.61599731;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.46923074;marker:none;enable-background:accumulate"
+       id="rect4145-8"
+       width="100"
+       height="150"
+       x="100"
+       y="252.3622"
+       ry="24.9"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\shield.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <circle
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#0d6cff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="path4138-0"
+       cx="150"
+       cy="302.36224"
+       r="75"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\shield.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.99228144px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 98.02608,357.39468 c 0,0 114.80741,1.92529 122.11332,-59.68405 7.30593,-61.60932 1.04372,24.06614 1.04372,24.06614 0,0 -29.2237,51.98288 -45.92298,54.87082 -16.69926,2.88793 -57.4037,1.92529 -77.23406,-19.25291 z"
+       id="path4148-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\shield.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 111.16975,274.52787 -1.11529,29.30357 15.61401,13.52475 17.84457,0 20.07516,-22.54122 0,-30.43065 -42.38089,-1.12707 z"
+       id="path8177"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\shield.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.4353404;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 141.99757,316.76959 0,23.16786 38.3754,-33.24084 -22.57378,-4.0292"
+       id="path8187"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\shield.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.17404604;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 121.77993,313.47281 -2.41955,31.60884 16.1303,18.43848 27.42152,-1.75604 0.80651,-37.755"
+       id="path8189"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\shield.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:8.23076344;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 160.76432,274.28406 34.48584,0 -2.15538,42.24962 -30.17509,19.57911"
+       id="path8191"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\shield.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:129.61599731;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.46923074;marker:none;enable-background:accumulate"
+       id="rect4145-8-3"
+       width="100"
+       height="150"
+       x="500"
+       y="252.3622"
+       ry="24.9"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\fire.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <circle
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="path4138-0-5"
+       cx="550"
+       cy="302.36224"
+       r="75"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\fire.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.99228144px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 498.02609,357.39468 c 0,0 114.80741,1.92529 122.11332,-59.68405 7.30593,-61.60932 1.04372,24.06614 1.04372,24.06614 0,0 -29.2237,51.98288 -45.92298,54.87082 -16.69926,2.88793 -57.4037,1.92529 -77.23406,-19.25291 z"
+       id="path4148-6-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\fire.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <ellipse
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="path8226"
+       cx="549.05847"
+       cy="304.34427"
+       rx="7.6619649"
+       ry="8.6721163"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\fire.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 512.88334,306.02155 c 0,0 35.45433,-21.88481 36.20867,-50.02242"
+       id="path8230"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\fire.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 586.00193,304.98642 c 0,0 -35.45433,-21.88481 -36.20867,-50.02242"
+       id="path8230-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\fire.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:8.15945816;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 517.37603,319.43537 c 0,0 27.81625,-13.02558 26.7036,36.90579"
+       id="path8253"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\fire.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:8.15945816;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 583.79018,320.46096 c 0,0 -27.81625,-13.02558 -26.7036,36.90579"
+       id="path8253-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Karsten\Desktop\Star Factions\fire.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+  </g>
+</svg>
+>>>>>>> Stashed changes

@@ -42,6 +42,11 @@ public class Board : MonoBehaviour
 	public float scale = 8;
 	public int size = 32;
 	public int waitTime = 25;
+	readonly static int NeedsFallDown = 1;
+	readonly static int NeedsRefill = 2;
+	readonly static int Done = 3;
+
+	public int state = Done;
 	//
 	public GameObject proto;
 	public GameObject lifeBar;
@@ -104,8 +109,8 @@ public class Board : MonoBehaviour
 	void Update ()
 	{
 		instance = this;
-		var energy = Time.time % 20 / 3;
-		var life = (Time.time % 20) / 10;
+		var energy = (Time.time/2.0f) % 10 / 10;
+		var life = (Time.time % 10) / 10;
 		energyBar.transform.localScale = new Vector3 (energy, 1, 1);
 		lifeBar.transform.localScale = new Vector3 (life, 1, 1);
 		if (hasChanges && match3 != null) {
@@ -113,17 +118,25 @@ public class Board : MonoBehaviour
 			if (waitCounter++ < waitTime) {
 				return;
 			}
-			waitCounter = 0;
 			
 			hasChanges = !match3.check ();
-			if (hasChanges) {
-				deleteRefill ();
+
+			if(state == NeedsFallDown) {
+				fallDown();
+				state = NeedsRefill;
+			} else if(state == NeedsRefill){
+				refill();
+				state = Done;
+			} else if (hasChanges && state == Done) {
+				delete();
+				state = NeedsFallDown;
 				comboCounter++;
 				text = "Points: " + points + "   Combo: x" + comboCounter;
 			} else {
 				comboCounter = 0;
 				text = "Points: " + points;
 			}
+			waitCounter = 0;
 		}
 		output.text = text;
 
@@ -252,6 +265,7 @@ public class Board : MonoBehaviour
 		var temp = first.colour;
 		first.colour = tile.colour;
 		tile.colour = temp;
+		refreshColours ();
 
 		hasChanges = true;
 
@@ -282,10 +296,22 @@ public class Board : MonoBehaviour
 		}
 	}
 
-	void deleteRefill ()
+	void delete ()
 	{
-		int newPoints = match3.deleteRefill ();
+		int newPoints = match3.delete ();
 		points += newPoints;
+		refreshColours ();
+	}
+
+	void fallDown ()
+	{
+		match3.fallDown ();
+		refreshColours ();
+	}
+
+	void refill ()
+	{
+		match3.refill ();
 		refreshColours ();
 	}
 }
